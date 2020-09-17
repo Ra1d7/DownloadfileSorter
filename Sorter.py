@@ -10,7 +10,7 @@ def getfiletype(name):
     if name.endswith((".pdf",".doc",".docx","xml",'html','htm','odt','txt',"dot","dotx",'log')):
         return "Documents"
     if name.endswith((".mp3",".mp4",".vlc",'webm','mpg','mp2','mpeg','mpe','mpv','ogg','m4p','m4v','avi','wmv','mov','qt','flv','swf','avchd')):
-        return "Videos"
+        return "Media"
     if name == "desktop.ini":
         pass
     else:
@@ -40,7 +40,7 @@ def main():
     global count
     for file in getlistoffiles(getdownloadsfolder()):
         f_type = getfiletype(file)
-        for type in ["Pictures","Programs","Documents","Video","Others"]:
+        for type in ["Pictures","Programs","Documents","Media","Others"]:
             if f_type == type:
                 dir = "\\%s\\" %type
                 makedirs(dir)
