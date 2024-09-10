@@ -2,6 +2,7 @@ import os
 from winreg import *
 import time
 count = 0
+# Try GetHub With Tareq
 def getfiletype(name):
     if name.endswith((".jpg",".png",".jpeg",".jpg",".ico",".gif",".tiff",".raw",'.exif')):
         return "Pictures"
